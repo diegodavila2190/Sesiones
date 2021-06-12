@@ -1,0 +1,234 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+3+5
+6+10
+5-1
+5*2
+(5-2)/2
+28%%6 
+
+
+```
+```{r}
+x= 10
+
+x<- 12
+
+x
+
+x=0
+y=10
+x=5
+z= y + x
+z
+x
+```
+
+asignacion de variables
+```{r}
+
+my_character <- "hola mundo"
+
+my_logical <- FALSE
+
+my_logical
+
+my_logical<-1
+my_logical <- TRUE
+
+my_logical <- FALSE
+
+
+```
+
+
+vectores
+
+```{r}
+
+numeric_vector <- c(1,2,3)
+numeric_vector <- c(x,2,3)
+numeric_vector
+
+
+
+character_vector <- c("a","b","c")
+character_vector
+```
+```{r}
+
+poker_vector<- c(140, -50, 20, -120, 240)
+roulette_vector <- c(-24, -50, 100, -350, 10)
+names(poker_vector) <- c("Monday", "Tuesday", "wednesday", "Thursday", "Friday" )
+poker_vector
+
+
+
+```
+
+```{r}
+x = 0
+
+```
+
+comparando  y seleccionando
+
+```{r}
+
+age <- 17
+
+age >=18
+age > 18
+
+age == 17 
+
+A_vector <- c(1,2,3)
+
+b_vector <- c(4,5,6)
+
+Total_vector <- A_vector + b_vector
+Total_vector
+
+
+
+total_pocker <-sum(poker_vector)
+total_pocker
+
+poker_vector
+poker_vector[1]
+poker_vector[c(1,3,4)]
+
+poker_vector[2:5]
+
+mean (poker_vector)
+slectio_vector <- poker_vector > 0
+slectio_vector
+
+```
+
+
+Matrices
+```{r}
+matrix (1:9,byrow=TRUE,nrow=3)
+
+
+```
+
+new_hope <- c(460.988, 314.4)
+```{r}
+new_hope <- c(460.988, 314.4)
+empire_strike <- c(2980.475, 247.900)
+return_jedi <- c(309.306, 165.8)
+
+box_office <- c(new_hope, empire_strike, return_jedi)
+
+stars_wars_matrix <- matrix(box_office, byrow=TRUE, nrow=3)
+stars_wars_matrix
+
+
+region <- c("US", "non-US")
+titles <- c("A new hope", "The empires strikes back", "Return of the Jedi")
+
+colnames (stars_wars_matrix) <-region
+rownames(stars_wars_matrix) <- titles
+
+stars_wars_matrix
+```
+rowSums ()
+```{r}
+
+
+worldwide_vector <- rowSums(stars_wars_matrix)
+
+worldwide_vector
+
+all_wars_variable <- cbind(stars_wars_matrix, worldwide_vector)
+all_wars_variable
+
+worldwide_cols <- colSums(stars_wars_matrix)
+worldwide_cols
+
+
+all_wars_variable <- rbind(all_wars_variable, worldwide_cols)
+all_wars_variable
+```
+
+
+
+Selection of matrix elements
+
+```{r}
+
+non_us_all <- all_wars_variable[,2]
+
+non_us_all
+
+mean (non_us_all)
+```
+
+```{r}
+
+us_all <- all_wars_variable [1:3,2]
+us_all <- us_all *0.12
+us_all
+```
+Factors
+
+```{r}
+ sex_vector <- c("Male","Female","Female","Male","Male")
+factor_sex_vector <- factor (sex_vector)
+factor_sex_vector
+
+
+temperature_vector <- c("High", "Low", "High", "Low", "Medium")
+factor_temperature_vector <- factor(temperature_vector, order=TRUE, levels=c("LOW","Medium","High"))
+factor_temperature_vector
+```
+Factor Levels
+
+
+```{r}
+
+survey_vector <- c("M","F","F","M","M")
+factor_survey_vector <- factor(survey_vector)
+
+factor_survey_vector
+
+levels(factor_survey_vector) <- c("Female", "Male")
+factor_survey_vector
+
+
+```
+Summarizing a factor
+
+```{r}
+
+summary(survey_vector)
+summary(factor_survey_vector)
+
+male <- factor_survey_vector[1]
+male
+
+female <- factor_survey_vector[2]
+female
+
+
+male > female
+speed_vector <- c("medium","slow","medium","fast")
+factor_speed_vector <- factor (speed_vector, ordered = TRUE, levels=c("slow","medium","fast"))
+factor_speed_vector
+
+da2 <- factor_speed_vector[2]
+da3 <- factor_speed_vector[1]
+
+da2
+da3
+
+da2 < da3
+
+da3 < da2
+
+```
