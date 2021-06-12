@@ -1,0 +1,103 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+3 == (2 + 1)
+"intermediate" != "r"
+TRUE != FALSE
+"Rchitect" != "rchitect"
+```
+Greater and less than
+
+```{r}
+-6 * 5 + 2 >= -10 + 1
+
+"raining" <= "table"
+TRUE > FALSE
+
+
+``` 
+Compare vectors
+
+```{r}
+
+likedin <- c(16,9,13,5,2,17,14)
+facebook <- c(17,7,5,16,8,13,14)
+
+
+likedin > 15
+facebook <= 10 
+
+likedin > facebook
+
+view <- matrix(c(likedin,facebook), nrow=2, byrow=TRUE)
+view
+
+view == 13
+
+view <= 14
+
+likedin <= 10 & facebook == 13
+
+likedin <= 10 | facebook == 13
+
+view > 11 & view <= 14
+
+```
+
+the if statement
+
+```{r}
+medium <- "Likedin"
+num_views <- 14
+if (medium == "Likedin")
+  {
+  print ("showing Linkedin Information")
+ 
+} else {
+  print("unknow medium")
+}
+
+if (num_views > 15)
+  {
+  print ("you are popular")
+ 
+} else {
+  print("try to be more visible!")
+}
+```
+
+customiza further: else if
+
+
+```{r}
+if (medium == "Likedin")
+  {
+  print ("showing Linkedin Information")
+ 
+} else if (medium == "Facebook") {
+  print("show facebook information")
+} else {
+  print ("unknow message")
+  
+}
+
+
+number <- 75
+result <- ""
+
+if  (number < 10){
+  if(number <5) {
+    result <- "extra small"
+  }else{
+    result<- "small"
+  }
+} else if (number <100){
+  result <- "medium"
+} else {
+  result <- "large"
+}
+print (result)
+```
+
