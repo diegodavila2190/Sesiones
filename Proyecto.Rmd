@@ -1,0 +1,44 @@
+---
+title: "R Notebook"
+output: html_notebook
+Name: Diego Davila 
+
+
+---
+```{r}
+library(tidyverse) 
+
+yearly <- read.csv("deaths_handwashing.csv")
+
+yearly
+```
+
+```{r}
+yearly_aux1 <- mutate(yearly, proportion_death = deaths/births)
+yearly_aux2 <- mutate(yearly, proportion_death = deaths/births)
+
+yearly_aux1 
+```
+
+
+```{r}
+yearly_aux1 %>%
+  
+  filter(clinic == "clinic 1")
+
+ggplot(yearly_aux1, aes(x=year, y=proportion_death))+ geom_line()
+  
+```
+
+```{r}
+yearly_aux2 %>%
+filter(clinic == "clinic 2")
+
+
+ggplot(yearly_aux2, aes(x=year, y=proportion_death))+ geom_line()
+
+
+
+
+```
+
