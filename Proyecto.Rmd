@@ -5,6 +5,8 @@ Name: Diego Davila
 
 
 ---
+
+CONOCIMIENTO DE DATOS 
 ```{r}
 library(tidyverse) 
 
@@ -14,31 +16,13 @@ yearly
 ```
 
 ```{r}
+
 yearly_aux1 <- mutate(yearly, proportion_death = deaths/births)
-yearly_aux2 <- mutate(yearly, proportion_death = deaths/births)
-
-yearly_aux1 
-```
-
-
-```{r}
-yearly_aux1 %>%
-  
-  filter(clinic == "clinic 1")
-
-ggplot(yearly_aux1, aes(x=year, y=proportion_death))+ geom_line()
-  
-```
-
-```{r}
-yearly_aux2 %>%
-filter(clinic == "clinic 2")
-
-
-ggplot(yearly_aux2, aes(x=year, y=proportion_death))+ geom_line()
-
+ggplot(yearly_aux1, aes(x=year, y=proportion_death, color= clinic))+ geom_line()
 
 
 
 ```
+
+4 COMIENZA EL LAVADO DE MANOS
 
